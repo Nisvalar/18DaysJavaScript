@@ -1,0 +1,32 @@
+body{
+    background-color: #B3B3B3;
+}
+
+#cursiva{
+    font-style: italic;
+}
+
+#subrayado{
+    text-decoration: underline;
+}
+
+#negrita{
+    font-weight: bold;
+}
+
+.imagen{
+    width: 300px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+.imagen:hover{
+    scale: 105%;
+}
+
+
+
+
+
+
+
