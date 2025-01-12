@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Proyecto - Responde antes de 30 Segundos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="temporizador()">
+    <h1 id="textoAlarma"></h1>
+
+    <h2>¡Responde a las preguntas antes de 30 segundos!</h2>
+
+    <p>1.- ¿Cómo te llamas?</p>
+    <input type="text" id="nombre">
+
+    <p>2.- ¿Que edad tienes?</p>
+    <input type="number" id="edad">
+
+    <p>3.- ¿Dónde vives?</p>
+    <input type="text" id="residencia">
+
+    <p>4.- ¿Cuál es tu número de teléfono?</p>
+    <input type="number" id="telefono">
+
+    <p>5.- Resuelve la suma: 5+2+3</p>
+    <input type="number" id="suma">
+
+
+    <br><br>
+    <button id="enviar" onclick="finalizado()">Enviar</button>
+
+    <br><br>
+    <button id="reset" onclick="reiniciar()">Reiniciar</button>
+
+    <audio id="audioFinal">
+        <source src="audios/alarma.mp3" type="audio/mpeg">
+        <p>Sonido NO habilitado</p>
+    </audio>
+
+
+
+    <script>
+        //Variables
+        let tiempoTerminado;
+        let intervaloDeTiempo;
+
+        function temporizador(){
+            tiempoTerminado = setTimeout(tiempoAcabado, 1000*30);
+            intervaloDeTiempo = setInterval(ticTac, 1000);
+
+            document.getElementById("textoAlarma").textContent = 30;
+        }
+
+        function ticTac() {
+            let contador = document.getElementById("textoAlarma").textContent;
+            
+            document.getElementById("textoAlarma").textContent = contador - 1;
+        }
+
+        function tiempoAcabado() {
+            clearInterval(intervaloDeTiempo);
+            clearTimeout(tiempoTerminado)
+            document.getElementById("textoAlarma").textContent = 0;
+            document.getElementById("audioFinal").play();
+            alert("Se a acabado el tiempo: GAME OVER");
+        }
+
+        function finalizado() {
+            clearTimeout(tiempoTerminado);
+            clearInterval(intervaloDeTiempo);
+
+            let fechaActual = new Date();
+            let nombre = document.getElementById("nombre").value;
+            let edad = document.getElementById("edad").value;
+            let residencia = document.getElementById("residencia").value;
+            let telefono = document.getElementById("telefono").value;
+            let suma = document.getElementById("suma").value;
+
+            let respuestas = "1.- Nombre: "+nombre+"\n 2.- Edad: "+edad+"\n 3.- Residencia: "+residencia+"\n 4.- Teléfono: "+telefono+"\n 5.- Suma: "+suma
+            
+            alert("Fecha: "+fechaActual.toLocaleDateString("es-ES") +"\n" +respuestas);
+        }
+
+        function reiniciar() { 
+            location.reload();
+        }
+    </script>
+</body>
+</html>
