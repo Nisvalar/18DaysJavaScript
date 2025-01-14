@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+</head>
+<body>
+    <script>
+        let base = 2;
+        let exponente = 2;
+        let diametro = 15;
+        let numero1 = -16;
+        let numero2 = 4.5;
+        let numero3 = 5.02;
+
+
+        function potenciar(base, exponente){
+            return Math.pow(base, exponente)
+        }
+
+        function calcularCircunferencia(diametro){
+            return Math.PI * diametro;
+        }
+
+        function valorAbsoluto(numero){
+            return Math.abs(numero);
+        }
+
+        function redondeo(numero3) {
+            return Math.round(numero3);
+        }
+
+        function redondeoAbajo(numero2){
+            return Math.floor(numero2);
+        }
+
+        function redondeoArriba(numero3){
+            return Math.ceil(numero3);
+        }
+
+        let mensaje = "La potencia de "+base+" elevado a "+exponente+" es: "+potenciar(base,exponente)+
+        "\nEl valor absoluto de "+numero1+" es: "+valorAbsoluto(numero1)+
+        "\nEl redondeo de "+numero2+" es: "+redondeo(numero2)+
+        "\nEl redondeo bajo de "+numero2+" es: "+redondeoAbajo(numero2)+
+        "\nEl redondeo arriba de "+numero3+" es: "+redondeoArriba(numero3)+
+        "\nLa circunferencia de "+diametro+" es: "+Math.round(calcularCircunferencia(diametro));
+
+        alert(mensaje);
+    </script>
+</body>
+</html>

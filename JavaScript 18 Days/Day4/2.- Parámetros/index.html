@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Parámetros</title>
+</head>
+<body>
+    <h2>Introduce dos número para sumarlos: </h2>
+    <p>Primer número</p>
+    <input type="number" id="numero1">
+
+    <p>Segundo número</p>
+    <input type="number" id="numero2">
+
+    <br><br>
+    <button onclick="mostrarResultado()">Calcular</button>
+
+    <h3 id="textoResultado"></h3>
+
+    <script>
+        function sumar(num1, num2){
+            resultado = +num1 + +num2;
+            return resultado;
+        }
+
+        function mostrarResultado(){
+            let numero1 = document.getElementById("numero1");
+            let numero2 = document.getElementById("numero2");
+            let textoResultado = document.getElementById("textoResultado");
+            let suma = sumar(numero1.value, numero2.value);
+
+            textoResultado.textContent = suma;
+        }
+    </script>
+</body>
+</html>
