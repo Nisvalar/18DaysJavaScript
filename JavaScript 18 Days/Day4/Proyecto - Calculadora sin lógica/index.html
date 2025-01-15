@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="centrado">
+      <h1>CALCULADORA</h1>
+      <br/>
+      <div>
+        <input type="number" id="campo2" />
+        <input type="number" id="campo1" />
+      </div>
+      <br /><br />
+      <div id="cuatroBotones">
+        <button onclick="suma()">+</button>
+        <button onclick="resta()">-</button>
+        <button onclick="multiplicacion()">x</button>
+        <button onclick="division()">/</button>
+      </div>
+      <div>
+        <button onclick="potencia()">^</button>
+        <button onclick="raiz()">√</button>
+      </div>
+      <div>
+        <button onclick="absoluto()">|x|</button>
+        <button onclick="random()">⤭</button>
+      </div>
+      <div>
+        <h2 id="resultado">Resultado</h2>
+      </div>
+      <div id="tresBotones">
+        <button onclick="redondeo()">round</button>
+        <button onclick="alSuelo()">floor</button>
+        <button onclick="alTecho()">ceil</button>
+      </div>
+    </div>
+  </body>
+</html>
