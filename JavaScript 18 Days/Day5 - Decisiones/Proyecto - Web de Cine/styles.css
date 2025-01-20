@@ -1,0 +1,91 @@
+/* Estilo general para el cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e1e; /* Fondo oscuro, como una sala de cine */
+    color: #fff; /* Texto en blanco para resaltar sobre el fondo oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+/* Estilo para los párrafos */
+p {
+    font-size: 20px;
+    color: #f39c12; /* Color dorado para un toque cinematográfico */
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #e74c3c; /* Rojo intenso, similar a las luces de emergencia de un cine */
+    color: white;
+    border: 2px solid #c0392b; /* Borde más oscuro para un buen contraste */
+    padding: 12px 30px;
+    margin: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+/* Efecto hover en los botones */
+button:hover {
+    background-color: #c0392b;
+    border-color: #e74c3c;
+}
+
+/* Estilo para el campo de entrada (input) */
+input[type="number"] {
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #f39c12; /* Borde dorado para seguir con el tema */
+    background-color: #333;
+    color: white;
+    margin: 15px 0;
+    text-align: center;
+}
+
+/* Estilo para el párrafo con el id 'pelicula' */
+#pelicula {
+    font-size: 24px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #e74c3c; /* Rojo para dar énfasis */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para darle un toque cinematográfico */
+    text-align: center;
+}
+
+/* Animación de aparición para los elementos */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Diseño de un contorno estilo cartel de cine para el formulario */
+form {
+    padding: 30px;
+    border: 5px solid #f39c12;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombras para crear profundidad */
+    width: 60%;
+    text-align: center;
+}
