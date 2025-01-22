@@ -1,0 +1,62 @@
+/* Estilo general para el cuerpo de la página */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Tipografía juguetona y amigable */
+    background-color: #34495e; /* Fondo gris oscuro azul con tono oscuro para no dañar la vista */
+    color: #fff; /* Texto blanco para buen contraste */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Centrado en la pantalla */
+}
+
+/* Estilo para el título */
+h2 {
+    font-size: 36px;
+    color: #ff6347; /* Tomate, un color cálido y divertido */
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #ffdd57; /* Amarillo brillante */
+    color: #333; /* Texto oscuro para hacer contraste con el amarillo */
+    font-weight: bold;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s, background-color 0.3s;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+}
+
+/* Efecto hover en los botones */
+button:hover {
+    background-color: #ff5733; /* Cambio de color al pasar el ratón (rojo anaranjado) */
+    transform: scale(1.1); /* Hace que el botón se agrande un poco al hacer hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+}
+
+/* Efecto al presionar los botones */
+button:active {
+    transform: scale(0.98); /* Hace que el botón se reduzca ligeramente cuando se presiona */
+}
+
+/* Añadir espacio entre los botones */
+button + button {
+    margin-left: 10px;
+}
+
+/* Estilo para hacer que los elementos estén bien alineados */
+body > * {
+    margin: 10px;
+}

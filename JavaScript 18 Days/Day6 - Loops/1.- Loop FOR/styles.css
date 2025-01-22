@@ -1,0 +1,84 @@
+/* Estilo general para el cuerpo de la página */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Tipografía juguetona */
+    background-color: #f0f8ff; /* Fondo azul claro */
+    color: #333; /* Color de texto oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Centrado en la pantalla */
+}
+
+/* Estilo para el título */
+h1 {
+    font-size: 40px;
+    color: #f39c12; /* Color amarillo brillante */
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2); /* Sombra para hacerlo más divertido */
+    text-transform: uppercase; /* Convertir todo a mayúsculas */
+}
+
+/* Estilo para los párrafos */
+p {
+    font-size: 20px;
+    color: #2980b9; /* Azul brillante */
+    margin: 10px 0;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para los párrafos */
+}
+
+/* Estilo para el campo de entrada */
+input[type="number"] {
+    padding: 12px;
+    font-size: 20px;
+    width: 200px;
+    border: 2px solid #3498db; /* Borde azul */
+    border-radius: 10px;
+    background-color: #ecf0f1; /* Fondo suave */
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: border-color 0.3s;
+}
+
+/* Efecto de enfoque para el campo de entrada */
+input[type="number"]:focus {
+    border-color: #f39c12; /* Cambio de borde a amarillo cuando se hace foco */
+    outline: none;
+    box-shadow: 0 0 8px rgba(243, 156, 18, 0.6); /* Sombra amarilla */
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #2980b9; /* Azul brillante */
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    transition: background-color 0.3s, box-shadow 0.3s;
+    text-transform: uppercase; /* Mayúsculas */
+}
+
+/* Efecto hover en el botón */
+button:hover {
+    background-color: #f39c12; /* Amarillo brillante al pasar el ratón */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra cuando pasa el ratón */
+}
+
+/* Estilo para hacer que los elementos estén bien alineados */
+body > * {
+    margin: 10px;
+}
+
+/* Estilo para los botones cuando se hacen clic */
+button:active {
+    transform: scale(0.98); /* Efecto de presionar el botón */
+}

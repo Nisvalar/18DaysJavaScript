@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Do While</title>
+  </head>
+  <body>
+    <script>
+      let vidas = 5;
+
+      do{
+        //Ver en consola
+        console.log("Vidas: "+vidas);
+        vidas--;
+      }while(vidas >= 0);
+
+      vidas = 5;
+      do{
+        //Ver en consola
+        console.log("Vidas: "+vidas);
+        vidas--;
+      }while(vidas > 10);
+
+      let nombre;
+
+      do {
+        nombre = prompt("Dime mi nombre: ", "Pista: Empieza por Fed...");
+      } while (nombre != "Fede");
+
+      document.write("<h1>Ese es mi nombre!</h1>");
+    </script>
+  </body>
+</html>
