@@ -1,0 +1,164 @@
+/* Reseteo básico de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general de la tienda */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F3E5AB; /* Un color amarillo pastel, suave y cálido */
+    color: #5D4037; /* Color marrón oscuro, recordando el color de la rosquilla */
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+
+/* Título principal */
+p {
+    font-size: 3rem; /* Aumento el tamaño de fuente */
+    color: #FF7043; /* Color coral dulce para el título */
+    font-weight: bold;
+    margin-bottom: 50px; /* Más espacio entre el título y lo demás */
+    font-family: 'Pacifico', cursive; /* Fuente más sabrosa y dulce */
+}
+
+/* Contenedor para las tiendas (es decir, los párrafos) */
+#itemsTiendas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo de cada párrafo de tienda */
+#itemsTiendas p {
+    background-color: #FFEB3B; /* Un color amarillo cálido para resaltar las tiendas */
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px;
+    margin-top: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px; /* Un poco más estrecho para ajustarse bien */
+    height: auto;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Ajuste para que haya máximo 5 elementos por fila */
+#itemsTiendas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    gap: 30px;
+}
+
+/* Efecto de hover para los párrafos */
+#itemsTiendas p:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del label (etiqueta de la tienda) */
+label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #D32F2F; /* Color rojo cálido para los labels */
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+/* Estilo del input (campo de ventas) */
+input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #FF7043; /* Borde naranja que hace juego con el título */
+    width: 80%;
+    margin-top: 10px;
+    background-color: #FFF3E0; /* Fondo suave para el campo de entrada */
+    transition: all 0.3s ease;
+}
+
+/* Efecto cuando el input recibe foco */
+input[type="number"]:focus {
+    outline: none;
+    border-color: #D32F2F; /* Cambio de borde cuando está enfocado */
+    box-shadow: 0 0 8px rgba(255, 64, 129, 0.7);
+}
+
+/* Botón de Calcular */
+button {
+    background-color: #FF4081; /* Un rosa irresistible */
+    color: white;
+    font-size: 1.4rem; /* Aumento un poco el tamaño */
+    padding: 14px 30px; /* Un poco más grande para hacerlo más llamativo */
+    border: none;
+    border-radius: 20px; /* Bordes redondeados y suaves */
+    cursor: pointer;
+    margin-top: 40px; /* Un poco más de espacio entre el botón y el contenido */
+    transition: all 0.3s ease;
+}
+
+/* Efecto de hover para el botón */
+button:hover {
+    background-color: #FF1744; /* Rosa más brillante cuando se pasa el mouse */
+    transform: scale(1.1);
+}
+
+/* Estilo de salida (mensaje de ventas) */
+#parrafoSalida {
+    font-size: 1.5rem; /* Aumento un poco el tamaño del mensaje */
+    font-weight: bold;
+    color: #4CAF50; /* Color verde para dar sensación de éxito */
+    margin-top: 40px;
+}
+
+/* Fondo con imágenes de rosquillas */
+#itemsTiendas p::before {
+    content: "";
+    position: absolute;
+    top: -40px; /* Más margen superior para evitar que choque con el párrafo de arriba */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 50px;
+    background-image: url('images/pink-1280.png'); /* Imagen rosquilla */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    animation: donutExplosion 2s infinite ease-in-out;
+}
+
+/* Animación de explosión de rosquillas */
+@keyframes donutExplosion {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateX(-50%) scale(1.5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Nueva clase para borde y texto rojo */
+.menor {
+    font-weight: bold;
+    background-color: #D32F2F !important;
+}
+
+/* Nueva clase para borde y texto verde */
+.mayor {
+    font-weight: bold;
+    background-color: #97f09a !important;
+}
+
