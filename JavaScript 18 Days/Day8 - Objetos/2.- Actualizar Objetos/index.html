@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Objetos</title>
+</head>
+<body>
+    <p>Mira en la consola: F12</p>
+    <script>
+        let perro = {
+            nombre: "Simba",
+            raza: "Shih Tzu",
+            edad: 4,
+            ladrar(){
+                console.log("Guau Guau");
+            }
+        };
+        console.log(perro);
+        console.log(perro.nombre);
+        console.log(perro.raza);
+        console.log(perro.edad);
+        perro.ladrar();
+        perro.edad = 10;
+        console.log("Ahora la edad es: "+perro.edad);
+
+        function cumpliarAnios() {
+            perro.edad = perro.edad+1;
+        }
+        cumpliarAnios();
+        console.log("La edad del perro despues de su cumpleaños es: "+perro.edad);
+
+        perro["colorOjos"] = "marrón";
+        console.log("El color de ojos de "+perro.nombre+" es "+perro.colorOjos);
+
+
+    </script>
+</body>
+</html>

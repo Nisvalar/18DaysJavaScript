@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Referencia This</title>
+</head>
+<body>
+    <p>Mira en la consola: F12</p>
+    <script>
+        let perro = {
+            nombre: "Simba",
+            raza: "Shih Tzu",
+            edad: 4,
+            ladrar(){
+                console.log("Guau Guau");
+            },
+            saludar(){
+                console.log("Hola, me llamo: "+this.nombre);
+            }
+        };
+        perro.saludar();
+
+        let perro2 = {
+            nombre: "Max",
+            raza: "Pastor Alemán",
+            edad: 1,
+            ladrar(){
+                console.log("Guau Guau");
+            },
+            saludar(){
+                console.log("Hola, me llamo: "+this.nombre);
+            }
+        };
+
+    </script>
+</body>
+</html>

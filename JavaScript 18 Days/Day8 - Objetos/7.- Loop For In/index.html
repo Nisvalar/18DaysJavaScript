@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop For In</title>
+</head>
+<body>
+    <p>Abre la consola con F12</p>
+    <script>
+        function Perro(raza, edad, color) {
+            this.patas = 4;
+            this.raza = raza;
+            this.edad = edad;
+            this.color = color;
+            this.ladrar = function () {
+                console.log("Guau");
+            }
+        }
+
+        let simba = new Perro("Shih Tzu", 4, "Blanco");
+        let max = new Perro("Pastor Alemán", 1, "Negro");
+        let yaki = new Perro("Cocker Spaniel", 5, "Marrón");
+
+        for(let caracteristica in max){
+            console.log(caracteristica+" : "+max[caracteristica]);
+        }   
+
+
+    </script>
+</body>
+</html>

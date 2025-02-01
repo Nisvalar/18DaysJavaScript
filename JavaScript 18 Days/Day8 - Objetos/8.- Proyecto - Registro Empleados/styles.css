@@ -1,0 +1,126 @@
+/* Estilo global */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2d3748; /* Gris oscuro para el fondo */
+    color: #e2e8f0; /* Gris claro para el texto */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    padding-top: 40px; /* Espaciado superior */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+}
+
+/* Contenedor para el formulario y lista de empleados */
+/* Contenedor para el formulario y lista de empleados */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 30px; /* Agregar espacio por encima */
+}
+
+/* Contenedor de los campos de formulario */
+.form {
+    width: 45%;
+    margin-left:50px;
+}
+
+/* Título */
+h2 {
+    margin-left: 60px;
+    color: #f7fafc; /* Color claro para el título */
+    margin-bottom: 20px;
+}
+
+/* Etiquetas */
+label {
+    margin-left: 15px;
+    font-weight: bold;
+    color: #e2e8f0; /* Gris claro */
+    margin-bottom: 5px;
+}
+
+/* Campos de texto */
+input[type="number"],
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-left: 10px;
+    border: 2px solid #cbd5e0; /* Borde gris claro */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #2d3748; /* Texto oscuro */
+    background-color: #edf2f7; /* Fondo gris claro */
+    margin-bottom: 15px;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #3182ce; /* Azul suave */
+    outline: none;
+}
+
+/* Botones */
+button {
+    margin-left: 200px;
+    width: 200px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:nth-of-type(1) {
+    background-color: #38b2ac; /* Botón superior color teal */
+    color: #fff;
+}
+
+button:nth-of-type(1):hover {
+    background-color: #319795; /* Hover con un tono más oscuro */
+}
+
+button:nth-of-type(2) {
+    background-color: #ed8936; /* Botón inferior color naranja */
+    color: #fff;
+}
+
+button:nth-of-type(2):hover {
+    background-color: #dd6b20; /* Hover con un tono más oscuro */
+}
+
+/* Contenedor de los empleados */
+.empleados-container {
+    margin-left: 100px;
+    width: 45%;
+    padding: 20px;
+    background-color: #ed8936;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de empleados */
+#empleados-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#empleados-list li {
+    background-color: #cbd5e0;
+    color: black;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#empleadosRegistrados{
+    color: black;
+}

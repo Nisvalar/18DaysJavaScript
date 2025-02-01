@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructores</title>
+</head>
+<body>
+    <p>Abre la consola: F12</p>
+    <script>
+        function Perro() {
+            this.patas = 4;
+            this.ladrar = function () {
+                console.log("Guau");
+            }
+        }
+
+        let simba = new Perro();
+        let max = new Perro();
+        let yaki = new Perro();
+
+        console.log(simba.patas);
+        console.log(simba.ladrar);
+    </script>
+</body>
+</html>
