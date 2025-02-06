@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototipos</title>
+</head>
+<body>
+    <script>
+        let perro = {nombre: 'simba'};
+
+        let perro1 = Object.create(perro);
+
+        console.log("Perro: "+ JSON.stringify(perro));
+        console.log("Perro1: "+ JSON.stringify(perro1));
+        console.log("Perro1.nombre: "+ JSON.stringify(perro1.nombre));
+
+        console.log("Perro: ⬇️");
+        console.log(perro.__proto__);
+        console.log("Perro1: ⬇️");
+        console.log(perro1.__proto__);
+    </script>
+</body>
+</html>

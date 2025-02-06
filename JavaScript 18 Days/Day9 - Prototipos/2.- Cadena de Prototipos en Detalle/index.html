@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos prototípicos</title>
+</head>
+<body>
+    <p>Abre F12 para ver la consola</p>
+    <script>
+        function Libro(autor, titulo, cantPaginas) {
+            this.autor = autor;
+            this.titulo = titulo;
+            this.cantPaginas = cantPaginas;
+        }
+
+        let libro1 = new Libro('Laura Gallego', 'El valle de los Lobos', 324);
+        console.log(libro1.valueOf());
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modificar Prototipos</title>
+</head>
+<body>
+    <p>Abre la consola con F12</p>
+    <script>
+        function Libro(autor, titulo, cantPaginas) {
+            this.autor = autor;
+            this.titulo = titulo;
+            this.cantPaginas = cantPaginas;
+        }
+
+        let libro1 = new Libro('Laura Gallego', 'El valle de los Lobos', 324);
+
+        //Agregamos una nueva función al prototipo Libro (Esto está mal, tendríamos que crearlo en el Constructor, solo es un ejemplo)
+        Libro.abrirLibro = function () {
+            alert(this.titulo+" ha sido abierto");
+        }
+
+        console.log(Libro.abrirLibro());
+        //Si escribimos esto: console.log(libro1.abrirLibro()); --> También da error
+
+        //Aquí si vamos a agregar la función como debería ser creada:
+        Libro.prototype.openBook = function(){
+            alert(this.titulo+" ha sido abierto");
+        }
+
+        //Ahora tampoco podría utilizar esto: console.log(Libro.openBook()); --> Tendrñia que asignarlo a un objetos con valores
+        console.log(libro1.openBook());
+
+        console.log("Es de buenas prácticas escribir las propiedades dentro del constructor y los métodos fuera de este.");
+
+        //EJEMPLO:
+        //Constructor:
+        function UnObjeto(a){
+            this.a = a;
+        }
+        //Métodos:
+        UnObjeto.prototype.metodo1 = function(){};
+        UnObjeto.prototype.metodo2 = function(){};
+
+    </script>
+</body>
+</html>
