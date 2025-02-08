@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Getters and Setters</title>
+  </head>
+  <body>
+    <p>Pulsa F12 para abrir la consola</p>
+    <script>
+      class Deportista {
+        constructor(nombre, apellido) {
+          this.nombre = nombre;
+          this.apellido = apellido;
+        }
+      }
+
+      class Futbolista extends Deportista {
+        constructor(nombre, apellido, goles) {
+          super(nombre, apellido);
+          this._goles = goles; //Se pone la barra baja (_) para indicar que es una propiedad privada (Solo es una convención)
+        }
+
+        get goles(){
+            return this._goles;
+        }
+
+        set goles(newGoles){
+            this._goles = newGoles;
+        }
+      }
+
+      let deportista1 = new Deportista("David", "Martínez");
+      console.log("El apellido del deportista uno es: " + deportista1.apellido);
+
+      let futbolista1 = new Futbolista("Paco", "Jimenez", 0);
+      console.log("El nombre del futbolista uno es: " + futbolista1.nombre);
+      console.log("El futbolista uno metio " + futbolista1.goles + " goles");
+    </script>
+  </body>
+</html>

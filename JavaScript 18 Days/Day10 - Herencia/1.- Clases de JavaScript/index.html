@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clases de JavaScript</title>
+</head>
+<body>
+    <p>Pulsa F12 para abrir la consola</p>
+    <script>
+        //Declaración de Clase
+        class Papel{
+            constructor(alto, ancho){
+                this.alto = alto;
+                this.ancho = ancho;
+            }
+        }
+
+        //Expresión de Clase Anónima (La clase no tiene nombre y toma el de la variable)
+        let PapelA = class{
+            constructor(alto, ancho){
+                this.alto = alto;
+                this.ancho = ancho;
+            }
+        }
+
+        //Expresión de Clase Nombrada (La clase tiene nombre, y este se guarda en la variable)
+        let PapelB = class PapelX{
+            constructor(alto, ancho){
+                this.alto = alto;
+                this.ancho = ancho;
+            }
+        }
+
+        console.log("La clase Anónima tiene de nombre: "+PapelA.name);
+        console.log("La clase Nombrada tiene de nombre: "+PapelB.name);
+
+        let papelZ = new Papel(5, 3);
+        console.log("Papel Z: "+papelZ.alto+", "+papelZ.ancho);
+
+
+
+    </script>
+</body>
+</html>
