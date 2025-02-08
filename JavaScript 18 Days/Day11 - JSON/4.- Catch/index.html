@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch</title>
+</head>
+<body>
+    <div id="nombre"></div>
+
+    <script>
+        let datosJSON;
+
+        fetch('persona.json')
+        .then(respuesta => respuesta.json())
+        .then((salida) => {
+            datosJSON = salida;
+
+            let elementoTexto = document.getElementById("nombre");
+
+            elementoTexto.textContent = datosJSON.nombre;
+        })
+        .catch(function(error) { //El parámetro error contiene la información del error que me está llegando
+            alert(error)
+        })
+    </script>
+</body>
+</html>

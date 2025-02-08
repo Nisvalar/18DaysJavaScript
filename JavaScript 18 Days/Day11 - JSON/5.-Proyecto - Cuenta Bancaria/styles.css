@@ -1,0 +1,89 @@
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general y tipografía */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9; /* Fondo suave */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo del título principal */
+h1 {
+    font-size: 40px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #7f8c8d;
+}
+
+/* Contenedor principal de la información */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea todo a la izquierda */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para cada par label-p */
+.info-container label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+.info-container p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: left;
+    margin-left: 10px; /* Esto asegura que los datos estén más cerca de los labels */
+}
+
+/* Alineación de label y p dentro del contenedor */
+.info-container .info-row {
+    display: flex;
+    width: 100%;
+}
+
+/* Contenedor para la sección de "Saldo" con el valor de USD y EUR */
+.saldo-container {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: flex-start; /* Alinea los elementos al principio */
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.saldo-container>p{
+    margin-top: 0px;
+}
+
+/* Estilo específico para la sección de "Saldo" con los valores debajo */
+#usd, #euros {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+p{
+    margin-top: 8px;
+}
+
+#euros{
+    color: green;
+}
+

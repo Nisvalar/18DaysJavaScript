@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cuenta de Banco</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body onload="cargarCuenta()">
+    <h1>BANCO DE SPRINGFIELD</h1>
+    <h2>Springfield, IL</h2>
+
+    <div class="info-container">
+      <div class="info-row">
+        <label>Nombre: </label>
+        <p id="nombre"></p>
+      </div>
+
+      <div class="info-row">
+        <label>Nº Cuenta:</label>
+        <p id="n_cuenta"></p>
+      </div>
+
+      <div class="info-row">
+        <label>Saldo:</label>
+        <div class="saldo-container">
+          <p id="usd"></p>
+          <p id="euros"></p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <label>CBU:</label>
+        <p id="CBU"></p>
+      </div>
+    </div>
+  </body>
+</html>

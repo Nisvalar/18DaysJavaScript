@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Acceder a JSON</title>
+  </head>
+  <body>
+    <div id="nombre"></div>
+    <script>
+      let datosJSON;
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', "persona.json", true);
+      xhr.responseType = 'json';
+      xhr.onload = function(){
+        if(xhr.status === 200){
+            datosJSON = xhr.response;
+            
+            let elementoTexto = document.getElementById("nombre");
+            elementoTexto.textContent = datosJSON.nombre;
+        }else{
+            //Manejar el Error
+            console.log("Hubo un problemilla jeje");
+        }
+      }
+
+      xhr.send();
+
+    </script>
+  </body>
+</html>

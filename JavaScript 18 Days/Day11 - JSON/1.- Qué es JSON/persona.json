@@ -1,0 +1,14 @@
+{
+    "nombre": "David",
+    "edad": 30,
+    "esEstudiante": false,
+    "direccion": {
+        "calle": "Padre Poveda",
+        "ciudad": "Purullena"
+    },
+    "teléfonos": [
+        "555-555-555",
+        "555-555-556"
+    ]
+}
+
