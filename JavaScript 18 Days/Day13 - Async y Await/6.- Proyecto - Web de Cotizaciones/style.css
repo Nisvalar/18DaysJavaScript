@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    color: #444;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: #666;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 20px 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+img:hover {
+    transform: scale(1.08);
+}
+
+div#euroToDolar,
+div#dolarToPeso,
+div#pesoToYuan,
+div#yuanToEuro {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 400px); /* Ajusta el ancho dejando 200px a la izquierda y derecha */
+    max-width: 800px; /* Limitar el ancho máximo para pantallas más grandes */
+}
+
+div#euroToDolar:hover,
+div#dolarToPeso:hover,
+div#pesoToYuan:hover,
+div#yuanToEuro:hover {
+    background-color: #e7f3fe;
+    border-color: #c8e1ff;
+}
+
+div#euroToDolar::before {
+    content: '\20AC'; /* Símbolo del euro */
+    color: #00aaff;
+    margin-right: 10px;
+}
+
+div#dolarToPeso::before{
+    content: '\24';
+    color: #009900;
+}
+
+div#pesoToYuan::before {
+    content: '\20B1'; /* Símbolo del peso */
+    color: #ff6600;
+}
+
+div#yuanToEuro::before {
+    content: '\5143'; /* Símbolo del yuan */
+    color: #ff0000;
+}
+
+div#euroToDolar::after {
+    content: '\24'; /* Símbolo del dólar */
+    color: #009900;
+}
+
+div#dolarToPeso::after {
+    content: '\20B1'; /* Símbolo del peso */
+    color: #ff6600;
+}
+
+div#pesoToYuan::after {
+    content: '\5143'; /* Símbolo del yuan */
+    color: #ff0000;
+}
+
+div#yuanToEuro::after {
+    content: '\20AC';
+    color: #00aaff;
+}
+
+
+#loading {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    visibility: none;
+}

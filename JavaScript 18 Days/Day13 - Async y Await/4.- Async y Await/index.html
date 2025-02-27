@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Async y Await</title>
+</head>
+<body>
+    <h2>ABRE LA CONSOLA CON F12</h2>
+    <script>
+        function obtenerDatos() {
+            return fetch('https://api.datos.gob.mx/v1/precio.gasolina.publico')
+            .then(function (respuesta) {
+                return respuesta.json();
+            })
+            .then(function (datos) {
+                console.log(datos);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+        }
+
+        obtenerDatos();
+        console.log("El código sigue");
+
+        //TODA LA FUNCIÓN ANTERIOR SE PUEDE RESUMIR EN:
+        async function obtenerDatosConAsync() {
+            let respuesta = await fetch('https://api.datos.gob.mx/v1/precio.gasolina.publico');
+            
+            let datos = await respuesta.json();
+
+            console.log(datos);
+        }
+
+        obtenerDatosConAsync();
+        console.log("El codigo sigue 2");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Promesas</title>
+</head>
+<body>
+    <h2>ABRE LA CONSOLA CON F12</h2>
+    <script>
+        function obtenerUsuariosAPI() {
+            return new Promise(function (resolve, reject) {
+                let xhr = new XMLHttpRequest();
+                xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+                xhr.onload = function(){
+                    if(xhr.status === 200){
+                        resolve(JSON.parse(xhr.responseText));
+                    }else{
+                        reject(xhr.statusText);
+                    }
+                }
+                xhr.send();
+            });
+        }
+
+        obtenerUsuariosAPI()
+        .then(function(usuarios){
+            console.log(usuarios);
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+
+    </script>
+</body>
+</html>

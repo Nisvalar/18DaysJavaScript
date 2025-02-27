@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Callbacks</title>
+</head>
+<body>
+    <h2>ABRE LA CONSOLA CON F12</h2>
+    <script>
+        function avanzaFila(callback) {
+            setTimeout(function () {
+                console.log("Tu turno ha llegado");
+                callback();
+            }, 5000);
+        }
+
+        function mujerTeLlama() {
+            console.log("Te presentas a tu turno");
+        }
+
+        console.log("LLegas a la Fila");
+        avanzaFila(mujerTeLlama);
+        console.log("Te vas a comprar café");
+
+    </script>
+</body>
+</html>

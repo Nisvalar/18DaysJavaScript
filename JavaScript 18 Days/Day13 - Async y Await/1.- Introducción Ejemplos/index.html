@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Introducción Sincronía y Asincronía</title>
+</head>
+<body>
+    <h2>ABRE LA CONSOLA CON F12</h2>
+    <script>
+        //ACCIÓN 1
+        console.log("INICIO EJEMPLO1: Inicio del código sincrono");
+
+        //ACCIÓN 2
+        for(let i = 0; i < 10; i++){
+            console.log(i);
+        }
+
+        //ACCIÓN 3
+        console.log("FIN EJEMPLO1: Fin del código síncrono");
+
+        console.log("_________________________________________________________________");
+
+        //ACCIÓN 1
+        console.log("INICIO EJEMPLO2: Inicio del código sincrono");
+
+        //ACCIÓN 2
+        setTimeout(function(){ //--> SET TIME OUT ES UNA FUNCIÓN ASÍNCRONA Y OCURRE EN 2º PLANO
+            for(let i = 0; i < 10; i++){
+                console.log(i);
+            }
+        }, 0);
+
+        //ACCIÓN 3
+        console.log("FIN EJEMPLO2: Fin del código síncrono");
+
+
+    </script>
+</body>
+</html>

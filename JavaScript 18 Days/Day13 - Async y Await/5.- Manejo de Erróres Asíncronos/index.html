@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo de Errores en Programación Asíncrona</title>
+</head>
+<body>
+    <h2>Abre la consola con F12</h2>
+    <script>
+        //CALLBACKS
+        function sumarNumeros(a, b, callback) {
+            setTimeout(function(){
+                if(typeof a != 'number' || typeof b != 'number'){
+                    return callback(new Error('Algún argumento no es un número'));
+                }
+                callback(null, a + b);
+            }, 1000);
+        }
+        sumarNumeros('1', 2, function (error, resultado) {
+            if(error){
+                console.log(error);
+            }else{
+                console.log(resultado);
+            }
+        });
+        
+        //PROMESAS
+        function sumarAyB(a, b) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function(){
+                    if(typeof a != 'number' || typeof b != 'number'){
+                        reject(new Error("Ambos argumentos deben ser números"));
+                    }else{
+                        resolve(a + b);
+                    }
+                }, 1000);
+            })
+            
+        }
+        sumarAyB('1', 2)
+        .then(function (resultado) {
+            console.log(resultado);
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+
+        //ASYNC/AWAIT
+        async function sumarDosNumeros(a, b) {
+            if(typeof a != 'number' || typeof b != 'number'){
+                throw new Error("Alguno de los argumentos no es un número");
+            }else{
+                return a + b;
+            }
+        }
+
+        async function manejarErrores() {
+            try{
+                console.log("Async y Await van primero que callback y promise por el segundo de espera: ");
+                let resultado = await sumarDosNumeros('2', 3);
+                console.log(resultado);
+            }catch(error){
+                console.log(error.message);
+            }
+        }
+
+        manejarErrores();
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Async y Await</title>
+</head>
+<body>
+    <h2>ABRE LA CONSOLA CON F12</h2>
+    <script>
+        async function obtenerTodo() {
+            console.log("Este código está al comienzo");
+            let respuestaGasolina = await fetch('https://api.datos.gob.mx/v1/precio.gasolina.publico');
+            let datosGasolina = await respuestaGasolina.json();
+
+            console.log("Este código está al medio");
+            let respuestaDolar = await fetch('https://open.er-api.com/v6/latest/USD');
+            let datosDolar = await respuestaDolar.json();
+
+            console.log(datosGasolina, datosDolar);
+            console.log("Este código está al final");
+        }
+
+        obtenerTodo();
+
+    </script>
+</body>
+</html>

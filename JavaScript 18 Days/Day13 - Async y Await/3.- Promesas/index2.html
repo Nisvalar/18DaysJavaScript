@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Promesas</title>
+</head>
+<body>
+    <h2>ABRE LA CONSOLA CON F12</h2>
+    <script>
+        let promesa1 = new Promise(function (resolve, reject) {
+            setTimeout(resolve, 2000, 'Hola');
+        });
+
+        let promesa2 = new Promise(function (resolve, reject) {
+            setTimeout(resolve, 4000, 'Mundo');
+        });
+
+        //PROMISE.ALL SE EJECUTA CUANDO TODAS LAS PROMESAS QUE HAY EN SU ARRAY SE HAN CUMPLIDO
+        Promise.all([promesa1, promesa2]).then(function (valores) {
+            console.log(valores);
+        })
+
+        console.log("El Código sigue su camino...");
+
+    </script>
+</body>
+</html>
